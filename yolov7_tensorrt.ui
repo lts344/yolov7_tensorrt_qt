@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>yolov7_tensorrt_qtClass</class>
+ <widget class="QWidget" name="yolov7_tensorrt_qtClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1095</width>
+    <height>680</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>yolov7_tensorrt_qt</string>
+  </property>
+  <widget class="QLabel" name="cameraview">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>90</y>
+     <width>640</width>
+     <height>480</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>画面显示区域</string>
+   </property>
+  </widget>
+  <widget class="QSplitter" name="mode">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>651</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <widget class="QPushButton" name="openfile">
+    <property name="font">
+     <font>
+      <family>宋体</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>选择模型</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="openimage">
+    <property name="font">
+     <font>
+      <family>宋体</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>图片检测</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="openvideo">
+    <property name="font">
+     <font>
+      <family>宋体</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>视频检测</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="opencamera">
+    <property name="font">
+     <font>
+      <family>宋体</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>相机检测</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="closecamera">
+    <property name="font">
+     <font>
+      <family>宋体</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>关闭画面</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QSplitter" name="path">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>600</y>
+     <width>651</width>
+     <height>71</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <widget class="QLabel" name="modelpath">
+    <property name="font">
+     <font>
+      <family>宋体</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>模型地址</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="imagepath">
+    <property name="font">
+     <font>
+      <family>宋体</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>读取地址</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QTextEdit" name="detectshow">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>130</y>
+     <width>201</width>
+     <height>541</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>宋体</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="html">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'宋体'; font-size:12pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;justify&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Adobe 宋体 Std L';&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QSplitter" name="splitter">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>20</y>
+     <width>201</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Vertical</enum>
+   </property>
+   <widget class="QPushButton" name="clearshow">
+    <property name="font">
+     <font>
+      <family>宋体</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>清空信息框</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="clearshow_2">
+    <property name="font">
+     <font>
+      <family>宋体</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>检测到的物体数量</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

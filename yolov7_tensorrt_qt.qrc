@@ -1,0 +1,4 @@
+<RCC>
+    <qresource prefix="yolov7_tensorrt_qt">
+    </qresource>
+</RCC>
